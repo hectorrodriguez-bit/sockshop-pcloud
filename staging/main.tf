@@ -126,7 +126,7 @@ resource "aws_elb" "microservices-demo-staging-k8s" {
   name = "microservices-demo-staging-k8s"
   instances = ["${aws_instance.k8s-node.*.id}"]
   availability_zones = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
-  security_groups = ["${aws_security_group.microservices-demo-staging-k8s.id}"]
+  security_groups =    ["${aws_security_group.microservices-demo-staging-k8s.id}"]
 
   listener {
     lb_port = 80
